@@ -34,6 +34,21 @@ public:
     }
 };
 
+#define MINX 2
+#define MINY 2
+#define MAXX 2
+#define MAXY 2
+
+void VeKhung(){
+    for(int i = MINX; i<=MAXX; i++)
+        for (int j = MINX; j<= MAXY; j++)
+            if ((i==MINX) || (i== MAXX) || (j==MINY) || (j==MAXY) ){
+                gotoxy(i,j);
+                printf("+");
+            }
+        
+}
+
 int main()
 {
     CONRAN r;
@@ -49,6 +64,7 @@ int main()
             if (t=='x') Huong = 1;
         }
         system("cls");
+        VeKhung();
         r.Ve();
         r.DiChuyen(Huong);
         Sleep(300);
@@ -56,7 +72,6 @@ int main()
 
     return 0;
 }
-
 
 void gotoxy( int column, int line )
   {
