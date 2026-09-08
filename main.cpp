@@ -2,7 +2,12 @@
 #include <windows.h>
 #include <cstdlib>
 #include <conio.h>
+#define MINX 2
+#define MINY 2
+#define MAXX 2
+#define MAXY 2
 using namespace std;
+
 void gotoxy( int column, int line );
 struct Point{
     int x,y;
@@ -33,11 +38,6 @@ public:
 
     }
 };
-
-#define MINX 2
-#define MINY 2
-#define MAXX 2
-#define MAXY 2
 
 void VeKhung(){
     for(int i = MINX; i<=MAXX; i++)
